@@ -10,9 +10,9 @@ opengovorg/pyspark:<spark version>-<hadoop version>-<iteration>
 
 where:
 
-* <spark version >: The version of Spark including the major, minor, and patch
-* <hadoop version >: The version of Spark including the major, minor, and patch
-* <iteration>: The iteration version of this release which may include upgraded python dependency versions
+* \<spark version\>: The version of Spark including the major, minor, and patch
+* \<hadoop version\>: The version of Spark including the major, minor, and patch
+* \<iteration\>: The iteration version of this release which may include upgraded python dependency versions
 
 
 ## License
