@@ -21,7 +21,7 @@ RUN apt-get install -yy -q vim less net-tools inetutils-ping \
 
 # Upgrade pip
 RUN cd /tmp && wget -q https://bootstrap.pypa.io/get-pip.py && \
-    python get-pip.py 'pip==8.0.3' && rm /tmp/get-pip.py
+    python get-pip.py 'pip==8.1.0' && rm /tmp/get-pip.py
 
 # Common python repositories. We need to install nupmy and scipy seperately first.
 RUN pip install --upgrade numpy==1.10.4 && \
