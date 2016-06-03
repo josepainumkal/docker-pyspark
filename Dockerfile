@@ -1,4 +1,4 @@
-FROM gettyimages/spark:1.5.2-hadoop-2.6
+FROM gettyimages/spark:1.6.0-hadoop-2.6
 MAINTAINER OpenGov, Inc. <mseal@opengov.com>
 
 ########################################################
@@ -21,13 +21,13 @@ RUN apt-get install -yy -q vim less net-tools inetutils-ping \
 
 # Upgrade pip
 RUN cd /tmp && wget -q https://bootstrap.pypa.io/get-pip.py && \
-    python get-pip.py 'pip==8.1.0' && rm /tmp/get-pip.py
+    python get-pip.py 'pip==8.1.2' && rm /tmp/get-pip.py
 
 # Common python repositories. We need to install nupmy and scipy seperately first.
 RUN pip install --upgrade numpy==1.10.4 && \
     pip install --upgrade scipy==0.17.0 && \
     pip install --upgrade \
-        pandas==0.17.0 \
+        pandas==0.18.1 \
         scikit-learn==0.17 \
         bottleneck==1.0.0 \
         requests==2.8.1 \
