@@ -1,4 +1,4 @@
-FROM gettyimages/spark:1.6.0-hadoop-2.6
+FROM gettyimages/spark:1.6.1-hadoop-2.6
 MAINTAINER OpenGov, Inc. <mseal@opengov.com>
 
 ########################################################
@@ -38,6 +38,12 @@ RUN pip install --upgrade numpy==1.10.4 && \
         boto==2.38.0 \
         pattern==2.6 \
         cyhunspell==1.1.3
+
+# IPython / Notebook dependencies
+# Install graphing capabilities
+RUN pip install ipython==4.1.2 jsonschema==2.5.1 jupyter==1.0.0 pygments==2.1 && \
+    pip install matplotlib==1.5.1 && \
+    pip install bokeh==0.11.1 seaborn==0.7.0 vincent==0.4.4
 
 # Add spark history directory
 RUN mkdir -p /var/log/spark/history

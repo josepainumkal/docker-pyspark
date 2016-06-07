@@ -1,5 +1,12 @@
 Pyspark Dockerfile Changelog
 ==============================
+1.6.1-hadoop-2.6.0-0 - 06/06/2016
+------------------
+### Spark Version Bump
+- Upgraded spark to v1.6.1
+### Added ipython depedencies
+- Added ipython and graphing depedencies to base image
+
 1.6.0-hadoop-2.6.0-0 - 06/03/2016
 ------------------
 ### Spark Version Bump
