@@ -19,6 +19,9 @@ RUN apt-get install -yy -q vim less net-tools inetutils-ping \
             libyaml-dev g++ libffi-dev libhunspell-1.3-0 libpgm-dev \
             libsodium-dev libzmq3 libzmq3-dev
 
+# Default to python 2
+ENV PYSPARK_PYTHON=python
+
 # Upgrade pip
 RUN cd /tmp && wget -q https://bootstrap.pypa.io/get-pip.py && \
     python get-pip.py 'pip==8.1.2' && rm /tmp/get-pip.py
@@ -37,7 +40,8 @@ RUN pip install --upgrade numpy==1.10.4 && \
         networkx==1.10 \
         boto==2.38.0 \
         pattern==2.6 \
-        cyhunspell==1.1.3
+        cyhunspell==1.1.3 \
+        py4j==0.10.1
 
 # IPython / Notebook dependencies
 # Install graphing capabilities
