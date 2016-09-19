@@ -1,3 +1,5 @@
+[![](https://images.microbadger.com/badges/image/opengovorg/pyspark.svg)](https://microbadger.com/images/opengovorg/pyspark "Supplied by microbadger.com")
+
 # docker-pyspark
 A debian:jessie based Python Spark container. Used as the base image for OpenGov's PySpark setup. Installs many python dependencies such as numpy, scipy, and pandas.
 
