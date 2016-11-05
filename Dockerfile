@@ -1,4 +1,4 @@
-FROM gettyimages/spark:1.6.1-hadoop-2.6
+FROM gettyimages/spark:2.0.1-hadoop-2.7
 MAINTAINER OpenGov, Inc. <mseal@opengov.com>
 
 ########################################################
@@ -41,7 +41,8 @@ RUN pip install --upgrade numpy==1.10.4 && \
         boto==2.38.0 \
         pattern==2.6 \
         cyhunspell==1.1.3 \
-        py4j==0.10.1
+        py4j==0.10.1 \
+        flask
 
 # IPython / Notebook dependencies
 # Install graphing capabilities
